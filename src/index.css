@@ -1,53 +1,90 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@font-face {
+  font-family: "PKMN RBYGSC";
+  src: url("./assets/fonts/PKMN-RBYGSC.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@custom-variant dark (&:is(.dark *));
+
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  /* Game Boy Pocket-style sage green LCD palette */
+  --gb-darkest: #082955;
+  --gb-dark: #14417a;
+  --gb-light: #a9c3a3;
+  --gb-lightest: #8aab82;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+  --text: var(--gb-dark);
+  --text-h: var(--gb-darkest);
+  --bg: var(--gb-lightest);
+  --border: var(--gb-darkest);
+  --code-bg: var(--gb-light);
+  --accent: var(--gb-darkest);
+  --accent-bg: rgba(8, 41, 85, 0.15);
+  --accent-border: rgba(8, 41, 85, 0.5);
+  --shadow: 4px 4px 0 0 var(--gb-darkest);
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
+  --sans: 'PKMN RBYGSC', 'Press Start 2P', monospace;
+  --heading: 'PKMN RBYGSC', 'Press Start 2P', monospace;
+  --mono: 'PKMN RBYGSC', ui-monospace, Consolas, monospace;
+
+  font: 16px/160% var(--sans);
+  letter-spacing: 0.5px;
+  color-scheme: light;
   color: var(--text);
   background: var(--bg);
   font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: none;
+  font-smooth: never;
 
   @media (max-width: 1024px) {
     font-size: 16px;
   }
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
+  --background: var(--gb-lightest);
+  --foreground: var(--gb-darkest);
+  --card: var(--gb-light);
+  --card-foreground: var(--gb-darkest);
+  --popover: var(--gb-lightest);
+  --popover-foreground: var(--gb-darkest);
+  --primary: var(--gb-darkest);
+  --primary-foreground: var(--gb-lightest);
+  --secondary: var(--gb-light);
+  --secondary-foreground: var(--gb-darkest);
+  --muted: var(--gb-light);
+  --muted-foreground: var(--gb-dark);
+  --accent-foreground: var(--gb-lightest);
+  --destructive: var(--gb-darkest);
+  --destructive-foreground: var(--gb-lightest);
+  --success: var(--gb-light);
+  --success-foreground: var(--gb-darkest);
+  --warning: var(--gb-dark);
+  --warning-foreground: var(--gb-lightest);
+  --link: var(--gb-darkest);
+  --input: var(--gb-light);
+  --ring: var(--gb-darkest);
 
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
+  --chart-1: var(--gb-darkest);
+  --chart-2: var(--gb-dark);
+  --chart-3: var(--gb-light);
+  --chart-4: var(--gb-lightest);
+  --chart-5: var(--gb-dark);
+
+  --radius: 0rem;
+
+  --sidebar: var(--gb-lightest);
+  --sidebar-foreground: var(--gb-darkest);
+  --sidebar-primary: var(--gb-darkest);
+  --sidebar-primary-foreground: var(--gb-lightest);
+  --sidebar-accent: var(--gb-light);
+  --sidebar-accent-foreground: var(--gb-darkest);
+  --sidebar-border: var(--gb-darkest);
+  --sidebar-ring: var(--gb-darkest);
 }
 
 body {
@@ -59,7 +96,7 @@ body {
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
-  border-inline: 1px solid var(--border);
+  border-inline: 4px solid var(--border);
   min-height: 100svh;
   display: flex;
   flex-direction: column;
@@ -69,43 +106,79 @@ body {
 h1,
 h2 {
   font-family: var(--heading);
-  font-weight: 500;
+  font-weight: 400;
   color: var(--text-h);
 }
 
 h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
+  font-size: 32px;
+  letter-spacing: 1px;
   margin: 32px 0;
   @media (max-width: 1024px) {
-    font-size: 36px;
+    font-size: 24px;
     margin: 20px 0;
   }
 }
 h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0.5px;
   margin: 0 0 8px;
   @media (max-width: 1024px) {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 p {
   margin: 0;
 }
 
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
+@theme inline {
+  --font-heading: var(--font-sans);
+  --font-sans: 'PKMN RBYGSC', 'Press Start 2P', monospace;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
-}
+@layer base {
+  * {
+    @apply border-border outline-ring/50;}
+  body {
+    @apply bg-background text-foreground;}
+  html {
+    @apply font-sans;}}

@@ -1,122 +1,82 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { useMemo, useState } from "react";
+import { pokemons } from "./data/pokemons";
+import TypeFilter from "./components/TypeFilter";
+import BarChart from "./components/BarChart";
+import ScatterChart from "./components/ScatterChart";
+import PokemonGrid from "./components/PokemonGrid";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/pixelact-ui/card";
+import "./styles/pokemon-card.css";
+import "./App.css";
+
+const types = [...new Set(pokemons.map((p) => p.type))].sort();
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [selectedType, setSelectedType] = useState(null);
+  const [hoveredId, setHoveredId] = useState(null);
+
+  const filteredPokemons = useMemo(
+    () =>
+      selectedType === null
+        ? pokemons
+        : pokemons.filter((p) => p.type === selectedType),
+    [selectedType],
+  );
 
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
+      <header className="app-header">
+        <h1>Pokédex</h1>
+        <p className="subtitle">
+          A small dataset of 20 Pokémon, visualized. Click a type or a chart
+          element to filter, hover a point or card to cross-highlight.
+        </p>
+      </header>
+
+      <TypeFilter types={types} selectedType={selectedType} onSelect={setSelectedType} />
+
+      <section className="charts-section">
+        <Card className="chart-block">
+          <CardHeader>
+            <CardTitle>Average HP &amp; Attack by Type</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <BarChart
+              pokemons={pokemons}
+              selectedType={selectedType}
+              onSelectType={setSelectedType}
+            />
+          </CardContent>
+        </Card>
+        <Card className="chart-block">
+          <CardHeader>
+            <CardTitle>Attack vs. HP</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ScatterChart
+              pokemons={pokemons}
+              selectedType={selectedType}
+              hoveredId={hoveredId}
+              onHover={setHoveredId}
+              onLeave={() => setHoveredId(null)}
+            />
+          </CardContent>
+        </Card>
       </section>
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
+      <section className="grid-section">
+        <h2>
+          {selectedType ? `${selectedType} Pokémon` : "All Pokémon"}{" "}
+          <span className="count">({filteredPokemons.length})</span>
+        </h2>
+        <PokemonGrid
+          pokemons={filteredPokemons}
+          hoveredId={hoveredId}
+          onHover={setHoveredId}
+          onLeave={() => setHoveredId(null)}
+        />
       </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
