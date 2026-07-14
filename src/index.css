@@ -18,8 +18,8 @@
   /* Game Boy Pocket-style sage green LCD palette */
   --gb-darkest: #082955;
   --gb-dark: #14417a;
-  --gb-light: #a9c3a3;
-  --gb-lightest: #8aab82;
+  --gb-light: #c9ca83;
+  --gb-lightest: #bbbd64;
 
   --text: var(--gb-dark);
   --text-h: var(--gb-darkest);

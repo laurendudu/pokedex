@@ -60,14 +60,23 @@
   stroke-width: 1;
 }
 
+.axis-label,
+.axis-title,
+.tooltip-title,
+.tooltip-line,
+.chart-legend {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  letter-spacing: normal;
+}
+
 .axis-label {
   fill: var(--text);
-  font-size: 11px;
+  font-size: 13px;
 }
 
 .axis-title {
   fill: var(--text-h);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
 }
 
@@ -106,19 +115,19 @@
 }
 
 .tooltip-title {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
 }
 
 .tooltip-line {
-  font-size: 11px;
+  font-size: 13px;
 }
 
 .chart-legend {
   display: flex;
   gap: 16px;
   justify-content: flex-end;
-  font-size: 12px;
+  font-size: 14px;
   color: var(--text);
   margin-bottom: 4px;
 }
