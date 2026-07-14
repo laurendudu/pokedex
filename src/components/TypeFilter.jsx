@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/pixelact-ui/button";
-import { getTypeColor } from "../data/typeColors";
+import { getTypeColor, getTypeTextColor } from "../data/typeColors";
 
 function TypeFilter({ types, selectedType, onSelect }) {
   return (
@@ -19,7 +19,10 @@ function TypeFilter({ types, selectedType, onSelect }) {
             variant="secondary"
             size="sm"
             className={`type-chip-button${active ? " active" : ""}`}
-            style={{ backgroundColor: getTypeColor(type), color: "#fff" }}
+            style={{
+              backgroundColor: getTypeColor(type),
+              color: getTypeTextColor(type),
+            }}
             onClick={() => onSelect(active ? null : type)}
           >
             {type}

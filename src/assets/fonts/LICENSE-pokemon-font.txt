@@ -1,0 +1,6 @@
+Font: Pokemon Font (Johto Font, based on the Pokémon R/G/B/Y Game Boy font)
+Author: Superpencil (https://superpencil.com)
+Source: https://github.com/cooljeanius/pokemon-font
+Copyright (c) 2016-2020 Superpencil, with portions Copyright (c) 1996 Game Freak and Nintendo.
+License: SIL Open Font License, Version 1.1 (OFL-1.1)
+Full license text: https://github.com/cooljeanius/pokemon-font/blob/master/LICENSE.md

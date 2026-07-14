@@ -237,8 +237,8 @@ button.card__rotator {
     0 0 3px -1px transparent, 
     0 0 2px 1px transparent, 
     0 0 5px 0px transparent,
-    0px 10px 20px -5px black, 
-    0 2px 15px -5px black,
+    0px 10px 20px -5px var(--gb-darkest),
+    0 2px 15px -5px var(--gb-darkest),
     0 0 20px 0px transparent;
 }
 
@@ -247,9 +247,9 @@ button.card__rotator {
   box-shadow: 
     0 0 3px -1px white, 
     0 0 3px 1px var(--card-edge), 
-    0 0 12px 2px var(--card-glow), 
-    0px 10px 20px -5px black, 
-    0 0 40px -30px var(--card-glow), 
+    0 0 12px 2px var(--card-glow),
+    0px 10px 20px -5px var(--gb-darkest),
+    0 0 40px -30px var(--card-glow),
     0 0 50px -20px var(--card-glow)
 }
 

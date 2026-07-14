@@ -3,8 +3,10 @@
 @import "shadcn/tailwind.css";
 
 @font-face {
-  font-family: "PKMN RBYGSC";
-  src: url("./assets/fonts/PKMN-RBYGSC.ttf") format("truetype");
+  font-family: "Pokemon Font";
+  src:
+    url("./assets/fonts/pokemon-font.woff2") format("woff2"),
+    url("./assets/fonts/pokemon-font.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -29,9 +31,9 @@
   --accent-border: rgba(8, 41, 85, 0.5);
   --shadow: 4px 4px 0 0 var(--gb-darkest);
 
-  --sans: 'PKMN RBYGSC', 'Press Start 2P', monospace;
-  --heading: 'PKMN RBYGSC', 'Press Start 2P', monospace;
-  --mono: 'PKMN RBYGSC', ui-monospace, Consolas, monospace;
+  --sans: 'Pokemon Font', 'Press Start 2P', monospace;
+  --heading: 'Pokemon Font', 'Press Start 2P', monospace;
+  --mono: 'Pokemon Font', ui-monospace, Consolas, monospace;
 
   font: 16px/160% var(--sans);
   letter-spacing: 0.5px;
@@ -134,7 +136,7 @@ p {
 
 @theme inline {
   --font-heading: var(--font-sans);
-  --font-sans: 'PKMN RBYGSC', 'Press Start 2P', monospace;
+  --font-sans: 'Pokemon Font', 'Press Start 2P', monospace;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);

@@ -1,8 +1,10 @@
 :root {
   --box-shadow-width: 4px;
-  --pixel-box-shadow: calc(-1 * (var(--box-shadow-width))) 0 0 0 black,
-    var(--box-shadow-width) 0 0 0 black, 0 var(--box-shadow-width) 0 0 black,
-    0 calc(-1 * (var(--box-shadow-width))) 0 0 black;
+  --pixel-box-shadow: calc(-1 * (var(--box-shadow-width))) 0 0 0
+      var(--gb-darkest),
+    var(--box-shadow-width) 0 0 0 var(--gb-darkest),
+    0 var(--box-shadow-width) 0 0 var(--gb-darkest),
+    0 calc(-1 * (var(--box-shadow-width))) 0 0 var(--gb-darkest);
   --pixel-box-shadow-destructive: calc(-1 * (var(--box-shadow-width))) 0 0 0
       var(--destructive),
     var(--box-shadow-width) 0 0 0 var(--destructive),
@@ -19,7 +21,7 @@
 }
 
 .pixel-font {
-  font-family: "PKMN RBYGSC", "Press Start 2P", system-ui, -apple-system, sans-serif;
+  font-family: "Pokemon Font", "Press Start 2P", system-ui, -apple-system, sans-serif;
   line-height: 1.5;
   letter-spacing: 0.5px;
 }

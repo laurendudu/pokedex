@@ -20,7 +20,7 @@ This project stands on the shoulders of some awesome open-source work and public
 
 ### Fonts
 
-- **[PKMN RBYGSC](https://www.dafont.com/pkmn-rbygsc.font)** by David — the Game Boy–style pixel font used throughout the UI. Free for personal use; see [`src/assets/fonts/LICENSE-PKMN-RBYGSC.txt`](src/assets/fonts/LICENSE-PKMN-RBYGSC.txt).
+- **[pokemon-font](https://github.com/cooljeanius/pokemon-font)** by [Superpencil](https://superpencil.com) (SIL Open Font License 1.1) — the Game Boy–style pixel font used throughout the UI, an extended clone of the original font shipped with Pokémon R/G/B/Y. See [`src/assets/fonts/LICENSE-pokemon-font.txt`](src/assets/fonts/LICENSE-pokemon-font.txt).
 
 ### Data notice
 
