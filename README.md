@@ -1,6 +1,6 @@
 # Pokédex
 
-A Game Boy–styled Pokédex built with React and Vite for a data visualization course. Browse 20 Pokémon as real TCG card scans with an interactive holographic effect, filter by type, and explore their HP/Attack stats through a custom bar chart and scatter chart (hand-built with plain SVG, no charting library).
+A Game Boy–styled Pokédex built with React and Vite, made for the [D3 Loves React](https://www.react-graph-gallery.com/react-d3-dataviz-course) data visualization course. Browse 20 Pokémon as real TCG card scans with an interactive holographic effect, filter by type, and explore their HP/Attack stats through a custom bar chart and scatter chart (hand-built with plain SVG, no charting library).
 
 ## Credits
 
