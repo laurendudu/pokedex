@@ -95,6 +95,35 @@ function App() {
           onLeave={() => setHoveredId(null)}
         />
       </section>
+
+      <footer className="app-footer">
+        <p>
+          Made by{" "}
+          <a href="https://github.com/laurendudu" target="_blank" rel="noopener noreferrer">
+            @laurendudu
+          </a>{" "}
+          · Holo card effect by{" "}
+          <a href="https://github.com/simeydotme" target="_blank" rel="noopener noreferrer">
+            @simeydotme
+          </a>{" "}
+          · Pixel UI by{" "}
+          <a href="https://github.com/pixelact-ui" target="_blank" rel="noopener noreferrer">
+            @pixelact-ui
+          </a>{" "}
+          · Font by{" "}
+          <a href="https://github.com/cooljeanius" target="_blank" rel="noopener noreferrer">
+            @cooljeanius
+          </a>{" "}
+          · Data from{" "}
+          <a href="https://pokemontcg.io" target="_blank" rel="noopener noreferrer">
+            Pokémon TCG API
+          </a>{" "}
+          &amp;{" "}
+          <a href="https://pokeapi.co" target="_blank" rel="noopener noreferrer">
+            PokéAPI
+          </a>
+        </p>
+      </footer>
     </>
   );
 }

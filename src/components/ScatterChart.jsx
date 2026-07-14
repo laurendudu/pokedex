@@ -2,7 +2,7 @@ import { spriteUrl } from "../data/pokemons";
 import { getTypeColor } from "../data/typeColors";
 
 const WIDTH = 700;
-const HEIGHT = 340;
+const HEIGHT = 260;
 const MARGIN = { top: 20, right: 20, bottom: 40, left: 40 };
 const MAX_VALUE = 160;
 const TICKS = [0, 40, 80, 120, 160];

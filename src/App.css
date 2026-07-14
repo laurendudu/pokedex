@@ -312,3 +312,30 @@
   text-align: right;
   font-family: var(--mono);
 }
+
+/* Footer */
+
+.app-footer {
+  padding: 16px 20px 28px;
+  border-top: 2px solid var(--border);
+  text-align: center;
+}
+
+.app-footer p {
+  max-width: 640px;
+  margin: 0 auto;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.app-footer a {
+  color: var(--text-h);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.app-footer a:hover {
+  color: var(--accent);
+}

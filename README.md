@@ -8,24 +8,24 @@ This project stands on the shoulders of some awesome open-source work and public
 
 ### Code
 
-- **[pokemon-cards-css](https://github.com/simeydotme/pokemon-cards-css)** by [simeydotme](https://github.com/simeydotme) (GPL-3.0) — the interactive holographic tilt/glare card effect. The CSS is vendored directly in [`src/styles/pokemon-card.css`](src/styles/pokemon-card.css); the pointer-tracking interaction logic (originally Svelte) was reimplemented in React in [`src/components/HoloCard.jsx`](src/components/HoloCard.jsx).
-- **[Pixelact UI](https://www.pixelactui.com/)** ([GitHub](https://github.com/pixelact-ui/pixelact-ui), MIT) — the pixel-art shadcn/ui component registry (buttons, badges, cards) used throughout the interface.
-- **[shadcn/ui](https://ui.shadcn.com/)** (MIT) — the underlying component primitives and CLI that Pixelact UI builds on.
-- **[Tailwind CSS](https://tailwindcss.com/)** (MIT) — utility CSS, used alongside plain custom CSS for the Game Boy theme.
+- **[pokemon-cards-css](https://github.com/simeydotme/pokemon-cards-css)** by [simeydotme](https://github.com/simeydotme) (GPL-3.0) - the interactive holographic tilt/glare card effect. The CSS is vendored directly in [`src/styles/pokemon-card.css`](src/styles/pokemon-card.css); the pointer-tracking interaction logic (originally Svelte) was reimplemented in React in [`src/components/HoloCard.jsx`](src/components/HoloCard.jsx).
+- **[Pixelact UI](https://www.pixelactui.com/)** ([GitHub](https://github.com/pixelact-ui/pixelact-ui), MIT) - the pixel-art shadcn/ui component registry (buttons, badges, cards) used throughout the interface.
+- **[shadcn/ui](https://ui.shadcn.com/)** (MIT) - the underlying component primitives and CLI that Pixelact UI builds on.
+- **[Tailwind CSS](https://tailwindcss.com/)** (MIT) - utility CSS, used alongside plain custom CSS for the Game Boy theme.
 
 ### Data & Images
 
-- **[Pokémon TCG API](https://pokemontcg.io/)** — real Pokémon Trading Card Game scans and card metadata (rarity, set, subtypes) used in the card gallery.
-- **[PokéAPI](https://pokeapi.co/)** — Pokémon sprites used in the scatter chart.
+- **[Pokémon TCG API](https://pokemontcg.io/)** - real Pokémon Trading Card Game scans and card metadata (rarity, set, subtypes) used in the card gallery.
+- **[PokéAPI](https://pokeapi.co/)** - Pokémon sprites used in the scatter chart.
 
 ### Fonts
 
-- **[pokemon-font](https://github.com/cooljeanius/pokemon-font)** by [Superpencil](https://superpencil.com) (SIL Open Font License 1.1) — the Game Boy–style pixel font used throughout the UI, an extended clone of the original font shipped with Pokémon R/G/B/Y. See [`src/assets/fonts/LICENSE-pokemon-font.txt`](src/assets/fonts/LICENSE-pokemon-font.txt).
+- **[pokemon-font](https://github.com/djacobs/pokemon-font)** by [Superpencil](https://superpencil.com) (SIL Open Font License 1.1) - the Game Boy–style pixel font used throughout the UI, an extended clone of the original font shipped with Pokémon R/G/B/Y. See [`src/assets/fonts/LICENSE-pokemon-font.txt`](src/assets/fonts/LICENSE-pokemon-font.txt).
 
 ### Logo
 
-- **[fontmeme.com](https://fontmeme.com/bend-images/)** — used to generate the site logo.
-- **[pixelartvillage.com](https://pixelartvillage.com/)** — used to convert the logo into pixel art. See [`src/assets/pokedex-logo-pixel.png`](src/assets/pokedex-logo-pixel.png).
+- **[fontmeme.com](https://fontmeme.com/bend-images/)** - used to generate the site logo.
+- **[pixelartvillage.com](https://pixelartvillage.com/)** - used to convert the logo into pixel art. See [`src/assets/pokedex-logo-pixel.png`](src/assets/pokedex-logo-pixel.png).
 
 ### Data notice
 
