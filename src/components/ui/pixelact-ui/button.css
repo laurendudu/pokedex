@@ -42,14 +42,14 @@
 
   &::after {
     border-right: 4px solid
-      color-mix(in hsl, var(--color-secondary) 70%, var(--gb-darkest));
+      color-mix(in srgb, var(--color-secondary) 70%, var(--gb-darkest));
     border-bottom: 4px solid
-      color-mix(in hsl, var(--color-secondary) 70%, var(--gb-darkest));
+      color-mix(in srgb, var(--color-secondary) 70%, var(--gb-darkest));
   }
 
   &:hover {
     background-color: color-mix(
-      in hsl,
+      in srgb,
       var(--color-secondary) 90%,
       var(--gb-darkest)
     );
@@ -57,7 +57,7 @@
 
   &:active {
     background-color: color-mix(
-      in hsl,
+      in srgb,
       var(--color-secondary) 70%,
       var(--gb-darkest)
     );

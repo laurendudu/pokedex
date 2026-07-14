@@ -4,6 +4,7 @@ import { getTypeColor, getTypeTextColor } from "../data/typeColors";
 function TypeFilter({ types, selectedType, onSelect }) {
   return (
     <div className="type-filter">
+      <h3 className="sidebar-heading">Filter by type</h3>
       <Button
         variant={selectedType === null ? "default" : "secondary"}
         size="sm"
@@ -20,7 +21,7 @@ function TypeFilter({ types, selectedType, onSelect }) {
             size="sm"
             className={`type-chip-button${active ? " active" : ""}`}
             style={{
-              backgroundColor: getTypeColor(type),
+              "--color-secondary": getTypeColor(type),
               color: getTypeTextColor(type),
             }}
             onClick={() => onSelect(active ? null : type)}

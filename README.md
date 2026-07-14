@@ -22,6 +22,11 @@ This project stands on the shoulders of some awesome open-source work and public
 
 - **[pokemon-font](https://github.com/cooljeanius/pokemon-font)** by [Superpencil](https://superpencil.com) (SIL Open Font License 1.1) — the Game Boy–style pixel font used throughout the UI, an extended clone of the original font shipped with Pokémon R/G/B/Y. See [`src/assets/fonts/LICENSE-pokemon-font.txt`](src/assets/fonts/LICENSE-pokemon-font.txt).
 
+### Logo
+
+- **[fontmeme.com](https://fontmeme.com/bend-images/)** — used to generate the site logo.
+- **[pixelartvillage.com](https://pixelartvillage.com/)** — used to convert the logo into pixel art. See [`src/assets/pokedex-logo-pixel.png`](src/assets/pokedex-logo-pixel.png).
+
 ### Data notice
 
 Pokémon and Pokémon character names are trademarks of Nintendo. This is a fan-made, non-commercial project for educational purposes.
