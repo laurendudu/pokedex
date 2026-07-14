@@ -45,10 +45,6 @@ function App() {
     <>
       <header className="app-header">
         <img src={logo} alt="Pokédex" className="app-logo" />
-        <p className="subtitle">
-          A small dataset of 20 Pokémon, visualized. Click a type or a chart
-          element to filter, hover a point or card to cross-highlight.
-        </p>
       </header>
 
       <section className="main-layout">
