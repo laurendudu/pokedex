@@ -26,6 +26,7 @@ This project stands on the shoulders of some awesome open-source work and public
 
 - **[fontmeme.com](https://fontmeme.com/bend-images/)** - used to generate the site logo.
 - **[pixelartvillage.com](https://pixelartvillage.com/)** - used to convert the logo into pixel art. See [`src/assets/pokedex-logo-pixel.png`](src/assets/pokedex-logo-pixel.png).
+- **[Pokeball pixel art](https://dinopixel.com/pokeball-pixel-art-18373)** by **maddie** on [DinoPIXEL](https://dinopixel.com/) - used as the site favicon. See [`public/pokeball-favicon.png`](public/pokeball-favicon.png).
 
 ### Data notice
 
